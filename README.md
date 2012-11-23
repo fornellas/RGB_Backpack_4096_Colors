@@ -56,19 +56,23 @@ Frame data packing
 
 Each color has 4bits (MSB) and you need 3 bytes to store data for 2 pixels:
 
+<pre>
  |      pixel0     |      pixel1     |
  | RRRR GGGG | BBBB RRRR | GGGG BBBB |
  |   byte0   |   byte1   |   byte2   |
+</pre>
 
 One frame will contain enough data to fill up all boards. A single board, will have a 96 bytes frame; two boards daisy chain, 192 bytes and so on.
 
 The order data must be sent, is as follows. For the example configuration below:
 
+<pre>
             +--> 0x0
            /
            +---+---+---+---+ --> 31x0
  Wires ==> | 0 | 1 | 2 | 3 |
            +---+---+---+---+ --> 31x7
+</pre>
 
 You must send data for each board in reverse order:
 
@@ -110,6 +114,7 @@ Sample interface code
 
 Here is a minimal code for Arduino 1.0. You should see a full white frame blinking at ~1Hz.
 
+<pre>
   #define BOARDS 1
   
   void setup() {
@@ -153,3 +158,4 @@ Here is a minimal code for Arduino 1.0. You should see a full white frame blinki
     // Wait 1s
     delay(1000);
   }
+</pre>
