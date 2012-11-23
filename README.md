@@ -3,6 +3,8 @@ What it is
 
 This is an alternative firmware for Sparkfun's serial interface RGB LED Matrix (http://www.sparkfun.com/products/760). It was based on Sparkfun's firmware v4 (http://www.sparkfun.com/datasheets/Components/RGB_Backpack_v4.zip) to address some limitations.
 
+Please also check out the Arduino library to easily interface with the new firmware: https://github.com/fornellas/SFRGBLEDMatrix.
+
 Motivation
 ==========
 
@@ -151,5 +153,3 @@ Here is a minimal code for Arduino 1.0. You should see a full white frame blinki
     // Wait 1s
     delay(1000);
   }
-
-

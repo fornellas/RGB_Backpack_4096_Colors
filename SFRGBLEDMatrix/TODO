@@ -1,5 +1,0 @@
-BUGS
-- box() seems to corrupt memory with values outside the screen.
-TODO
-- Implement setFont(), receiving a pointer to PROGMEM font.
-- Import some fonts from U8Glib.
